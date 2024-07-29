@@ -20,10 +20,10 @@ public class Coupon {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-    private float discount_percent;
+    private double discount_percent;
     @Builder.Default
     private LocalDateTime start_date = LocalDateTime.now();
     private LocalDateTime expire_date;
     @Builder.Default
-    private boolean status=true;
+    private boolean status = true;
 }

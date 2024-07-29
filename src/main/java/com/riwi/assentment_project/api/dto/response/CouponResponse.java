@@ -13,7 +13,7 @@ import lombok.experimental.SuperBuilder;
 @SuperBuilder
 public class CouponResponse {
     private Long id;
-    private float discount_percent;
+    private double discount_percent;
     private LocalDateTime start_date;
     private LocalDateTime expire_date;
     private boolean status;

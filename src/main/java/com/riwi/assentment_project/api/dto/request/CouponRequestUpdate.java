@@ -16,9 +16,8 @@ import lombok.NoArgsConstructor;
 @NoArgsConstructor
 @Builder
 public class CouponRequestUpdate {
-    @Size(min = 0, max = 100, message = "Discount Percent must be between 0 and 100")
     @NotNull(message = "Discount Percent cannot be null")
-    private float discount_percent;
+    private double discount_percent;
 
     @FutureOrPresent(message = "Expire Date cannot be in the future")
     private LocalDateTime expire_date;
