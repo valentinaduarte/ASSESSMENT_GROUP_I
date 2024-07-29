@@ -1,0 +1,17 @@
+Index: target/classes/application.properties
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>spring.application.name=assentment_project\n\nserver.servlet.context-path=/api/v1/coupoRiwi\n\n#LOCAL\nspring.datasource.url=jdbc:mysql://localhost:3306/coupo_riwi\nspring.datasource.username=root\nspring.datasource.password=Rlwl2023.\nspring.datasource.driver-class-name=com.mysql.cj.jdbc.Driver\nspring.jpa.hibernate.ddl-auto=update\nspring.jpa.show-sql=true\nspring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect\n\nmanagement.endpoint.health.show-details=always\nmanagement.endpoints.web.exposure.include=*\n
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>ISO-8859-1
+===================================================================
+diff --git a/target/classes/application.properties b/target/classes/application.properties
+--- a/target/classes/application.properties	(revision 6b4173681466019572d01000e3fdbebb8af485fc)
++++ b/target/classes/application.properties	(date 1722278314822)
+@@ -10,6 +10,3 @@
+ spring.jpa.hibernate.ddl-auto=update
+ spring.jpa.show-sql=true
+ spring.jpa.database-platform=org.hibernate.dialect.MySQL8Dialect
+-
+-management.endpoint.health.show-details=always
+-management.endpoints.web.exposure.include=*

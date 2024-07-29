@@ -1,0 +1,68 @@
+Index: target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/UserMapperImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.riwi.assentment_project.util.mappers;\n\nimport com.riwi.assentment_project.api.dto.request.UserRequest;\nimport com.riwi.assentment_project.api.dto.response.UserBasicResponse;\nimport com.riwi.assentment_project.domain.entities.User;\nimport javax.annotation.processing.Generated;\nimport org.springframework.stereotype.Component;\n\n@Generated(\n    value = \"org.mapstruct.ap.MappingProcessor\",\n    date = \"2024-07-29T13:32:32-0500\",\n    comments = \"version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)\"\n)\n@Component\npublic class UserMapperImpl implements UserMapper {\n\n    @Override\n    public User requestToEntity(UserRequest request) {\n        if ( request == null ) {\n            return null;\n        }\n\n        User.UserBuilder user = User.builder();\n\n        user.email( request.getEmail() );\n        user.lastname( request.getLastname() );\n        user.name( request.getName() );\n        user.password( request.getPassword() );\n        user.rol( request.getRol() );\n\n        return user.build();\n    }\n\n    @Override\n    public UserBasicResponse entityToResp(User entity) {\n        if ( entity == null ) {\n            return null;\n        }\n\n        UserBasicResponse.UserBasicResponseBuilder userBasicResponse = UserBasicResponse.builder();\n\n        userBasicResponse.email( entity.getEmail() );\n        userBasicResponse.id( entity.getId() );\n        userBasicResponse.lastname( entity.getLastname() );\n        userBasicResponse.name( entity.getName() );\n        userBasicResponse.rol( entity.getRol() );\n\n        return userBasicResponse.build();\n    }\n}\n
+===================================================================
+diff --git a/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/UserMapperImpl.java b/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/UserMapperImpl.java
+--- a/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/UserMapperImpl.java	
++++ b/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/UserMapperImpl.java	
+@@ -8,7 +8,7 @@
+ 
+ @Generated(
+     value = "org.mapstruct.ap.MappingProcessor",
+-    date = "2024-07-29T13:32:32-0500",
++    date = "2024-07-29T13:40:57-0500",
+     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)"
+ )
+ @Component
+Index: target/generated-sources/annotations/com/riwi/assentment_project/infraestructure/mappers/ProductMapperImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.riwi.assentment_project.infraestructure.mappers;\n\nimport com.riwi.assentment_project.api.dto.response.ProductResponse;\nimport com.riwi.assentment_project.domain.entities.Product;\nimport javax.annotation.processing.Generated;\nimport org.springframework.stereotype.Component;\n\n@Generated(\n    value = \"org.mapstruct.ap.MappingProcessor\",\n    date = \"2024-07-29T12:40:13-0500\",\n    comments = \"version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)\"\n)\n@Component\npublic class ProductMapperImpl implements ProductMapper {\n\n    @Override\n    public ProductResponse entityToResponse(Product entity) {\n        if ( entity == null ) {\n            return null;\n        }\n\n        ProductResponse productResponse = new ProductResponse();\n\n        productResponse.setName( entity.getName() );\n        productResponse.setPrice( entity.getPrice() );\n        productResponse.setStock( entity.getStock() );\n\n        return productResponse;\n    }\n}\n
+===================================================================
+diff --git a/target/generated-sources/annotations/com/riwi/assentment_project/infraestructure/mappers/ProductMapperImpl.java b/target/generated-sources/annotations/com/riwi/assentment_project/infraestructure/mappers/ProductMapperImpl.java
+--- a/target/generated-sources/annotations/com/riwi/assentment_project/infraestructure/mappers/ProductMapperImpl.java	
++++ b/target/generated-sources/annotations/com/riwi/assentment_project/infraestructure/mappers/ProductMapperImpl.java	
+@@ -7,7 +7,7 @@
+ 
+ @Generated(
+     value = "org.mapstruct.ap.MappingProcessor",
+-    date = "2024-07-29T12:40:13-0500",
++    date = "2024-07-29T13:40:57-0500",
+     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)"
+ )
+ @Component
+Index: target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponMapperImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.riwi.assentment_project.util.mappers;\n\nimport com.riwi.assentment_project.api.dto.request.CouponRequest;\nimport com.riwi.assentment_project.api.dto.request.CouponRequestUpdate;\nimport com.riwi.assentment_project.api.dto.response.CouponResponse;\nimport com.riwi.assentment_project.domain.entities.Coupon;\nimport javax.annotation.processing.Generated;\nimport org.springframework.stereotype.Component;\n\n@Generated(\n    value = \"org.mapstruct.ap.MappingProcessor\",\n    date = \"2024-07-29T13:12:09-0500\",\n    comments = \"version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)\"\n)\n@Component\npublic class CouponMapperImpl implements CouponMapper {\n\n    @Override\n    public CouponResponse entityToResponse(Coupon coupon) {\n        if ( coupon == null ) {\n            return null;\n        }\n\n        CouponResponse.CouponResponseBuilder<?, ?> couponResponse = CouponResponse.builder();\n\n        couponResponse.discount_percent( coupon.getDiscount_percent() );\n        couponResponse.expire_date( coupon.getExpire_date() );\n        couponResponse.id( coupon.getId() );\n        couponResponse.start_date( coupon.getStart_date() );\n        couponResponse.status( coupon.isStatus() );\n\n        return couponResponse.build();\n    }\n\n    @Override\n    public Coupon requestToEntity(CouponRequest couponRequest) {\n        if ( couponRequest == null ) {\n            return null;\n        }\n\n        Coupon.CouponBuilder coupon = Coupon.builder();\n\n        coupon.discount_percent( couponRequest.getDiscount_percent() );\n        coupon.expire_date( couponRequest.getExpire_date() );\n\n        return coupon.build();\n    }\n\n    @Override\n    public Coupon requestUpdateToEntity(CouponRequestUpdate couponRequestUpdate) {\n        if ( couponRequestUpdate == null ) {\n            return null;\n        }\n\n        Coupon.CouponBuilder coupon = Coupon.builder();\n\n        coupon.discount_percent( couponRequestUpdate.getDiscount_percent() );\n        coupon.expire_date( couponRequestUpdate.getExpire_date() );\n        coupon.status( couponRequestUpdate.isStatus() );\n\n        return coupon.build();\n    }\n}\n
+===================================================================
+diff --git a/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponMapperImpl.java b/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponMapperImpl.java
+--- a/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponMapperImpl.java	
++++ b/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponMapperImpl.java	
+@@ -9,7 +9,7 @@
+ 
+ @Generated(
+     value = "org.mapstruct.ap.MappingProcessor",
+-    date = "2024-07-29T13:12:09-0500",
++    date = "2024-07-29T13:40:57-0500",
+     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)"
+ )
+ @Component
+Index: target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponRedemptionMapperImpl.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.riwi.assentment_project.util.mappers;\n\nimport com.riwi.assentment_project.api.dto.request.CouponRedemptionRequest;\nimport com.riwi.assentment_project.domain.entities.CouponRedemption;\nimport javax.annotation.processing.Generated;\nimport org.springframework.stereotype.Component;\n\n@Generated(\n    value = \"org.mapstruct.ap.MappingProcessor\",\n    date = \"2024-07-29T13:32:05-0500\",\n    comments = \"version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)\"\n)\n@Component\npublic class CouponRedemptionMapperImpl implements CouponRedemptionMapper {\n\n    @Override\n    public CouponRedemption requestToEntity(CouponRedemptionRequest request) {\n        if ( request == null ) {\n            return null;\n        }\n\n        CouponRedemption.CouponRedemptionBuilder couponRedemption = CouponRedemption.builder();\n\n        return couponRedemption.build();\n    }\n}\n
+===================================================================
+diff --git a/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponRedemptionMapperImpl.java b/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponRedemptionMapperImpl.java
+--- a/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponRedemptionMapperImpl.java	
++++ b/target/generated-sources/annotations/com/riwi/assentment_project/util/mappers/CouponRedemptionMapperImpl.java	
+@@ -7,7 +7,7 @@
+ 
+ @Generated(
+     value = "org.mapstruct.ap.MappingProcessor",
+-    date = "2024-07-29T13:32:05-0500",
++    date = "2024-07-29T13:40:57-0500",
+     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)"
+ )
+ @Component
