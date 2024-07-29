@@ -1,3 +1,5 @@
+package com.riwi.assentment_project.domain.entities;
+
 import java.time.LocalDate;
 
 import jakarta.persistence.Entity;
