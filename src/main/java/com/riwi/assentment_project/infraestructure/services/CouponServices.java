@@ -3,7 +3,6 @@ package com.riwi.assentment_project.infraestructure.services;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
 
 import com.riwi.assentment_project.api.dto.request.CouponRequest;
@@ -34,7 +33,6 @@ public class CouponServices implements ICouponService {
 
     @Override
     public Page<CouponResponse> getAll(int page, int size) {
-
         if (page < 0) {
             page = 0;
         }
@@ -60,8 +58,9 @@ public class CouponServices implements ICouponService {
 
     @Override
     public CouponResponse delete(Long id) {
-        // TODO Auto-generated method stub
-        throw new UnsupportedOperationException("Unimplemented method 'delete'");
+        Coupon coupon = this.findById(id);
+        couponRepository.delete(coupon);
+        return this.couponMapper.entityToResponse(coupon);
     }
 
     private Coupon findById(Long id) {
