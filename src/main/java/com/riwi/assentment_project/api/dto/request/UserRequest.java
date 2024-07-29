@@ -21,7 +21,6 @@ public class UserRequest {
     private String name;
     @NotBlank(message = "The lastname is required")
     private String lastname;
-    @NotBlank(message = "The rol is required")
     private Rol rol;
     @Email
     @NotBlank(message = "The email is required")
