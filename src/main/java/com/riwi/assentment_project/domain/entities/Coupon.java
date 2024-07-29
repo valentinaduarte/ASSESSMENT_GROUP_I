@@ -1,6 +1,6 @@
 package com.riwi.assentment_project.domain.entities;
 
-import java.time.LocalDate;
+import java.time.LocalDateTime;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -21,7 +21,9 @@ public class Coupon {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     private float discount_percent;
-    private LocalDate start_date;
-    private LocalDate expire_date;
-    private boolean Status;
+    @Builder.Default
+    private LocalDateTime start_date = LocalDateTime.now();
+    private LocalDateTime expire_date;
+    @Builder.Default
+    private boolean status=true;
 }
