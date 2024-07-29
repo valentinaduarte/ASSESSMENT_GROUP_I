@@ -5,6 +5,7 @@ import org.mapstruct.MappingConstants;
 import org.mapstruct.ReportingPolicy;
 
 import com.riwi.assentment_project.api.dto.request.CouponRequest;
+import com.riwi.assentment_project.api.dto.request.CouponRequestUpdate;
 import com.riwi.assentment_project.api.dto.response.CouponResponse;
 import com.riwi.assentment_project.domain.entities.Coupon;
 
@@ -13,5 +14,7 @@ public interface CouponMapper {
     CouponResponse entityToResponse(Coupon coupon);
 
     Coupon requestToEntity(CouponRequest couponRequest);
+
+    Coupon requestUpdateToEntity(CouponRequestUpdate couponRequestUpdate);
 
 }
