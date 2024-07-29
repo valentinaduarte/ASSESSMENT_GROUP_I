@@ -1,0 +1,7 @@
+/home/riwip4co-027/Downloads/ASSESSMENT_GROUP_I/src/main/java/com/riwi/assentment_project/AssentmentProjectApplication.java
+/home/riwip4co-027/Downloads/ASSESSMENT_GROUP_I/src/main/java/com/riwi/assentment_project/config/OpenApiConfig.java
+/home/riwip4co-027/Downloads/ASSESSMENT_GROUP_I/src/main/java/com/riwi/assentment_project/infraestructure/abstract_services/CRUD/Create.java
+/home/riwip4co-027/Downloads/ASSESSMENT_GROUP_I/src/main/java/com/riwi/assentment_project/infraestructure/abstract_services/CRUD/Delete.java
+/home/riwip4co-027/Downloads/ASSESSMENT_GROUP_I/src/main/java/com/riwi/assentment_project/infraestructure/abstract_services/CRUD/Read.java
+/home/riwip4co-027/Downloads/ASSESSMENT_GROUP_I/src/main/java/com/riwi/assentment_project/infraestructure/abstract_services/CRUD/ReadAll.java
+/home/riwip4co-027/Downloads/ASSESSMENT_GROUP_I/src/main/java/com/riwi/assentment_project/infraestructure/abstract_services/CRUD/Update.java
