@@ -2,13 +2,13 @@
 
 ## GROUP MEMBERS:
 
-* Carlos Andres Aguiar.
+* Mateo Alvarez SCRUM MASTER
 
-* Mateo Alvarez.
+* David Pineda PRODUCT OWNER
+  
+* Carlos Andres Aguiar DEVELOPER
 
-* David Pineda.
-
-* Valentina Duarte.
+* Valentina Duarte DEVELOPER
 
 # Coupon Management and Redemption System
 ### Problem Description:
