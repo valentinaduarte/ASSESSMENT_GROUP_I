@@ -2,37 +2,37 @@ package com.riwi.assentment_project.util.mappers;
 
 import com.riwi.assentment_project.api.dto.request.UserRequest;
 import com.riwi.assentment_project.api.dto.response.UserBasicResponse;
-import com.riwi.assentment_project.domain.entities.UserEntity;
+import com.riwi.assentment_project.domain.entities.User;
 import javax.annotation.processing.Generated;
 import org.springframework.stereotype.Component;
 
 @Generated(
     value = "org.mapstruct.ap.MappingProcessor",
-    date = "2024-07-29T11:31:50-0500",
+    date = "2024-07-29T11:36:58-0500",
     comments = "version: 1.5.5.Final, compiler: Eclipse JDT (IDE) 3.39.0.v20240620-1855, environment: Java 17.0.11 (Eclipse Adoptium)"
 )
 @Component
 public class UserMapperImpl implements UserMapper {
 
     @Override
-    public UserEntity requestToEntity(UserRequest request) {
+    public User requestToEntity(UserRequest request) {
         if ( request == null ) {
             return null;
         }
 
-        UserEntity.UserEntityBuilder userEntity = UserEntity.builder();
+        User.UserBuilder user = User.builder();
 
-        userEntity.email( request.getEmail() );
-        userEntity.lastname( request.getLastname() );
-        userEntity.name( request.getName() );
-        userEntity.password( request.getPassword() );
-        userEntity.rol( request.getRol() );
+        user.email( request.getEmail() );
+        user.lastname( request.getLastname() );
+        user.name( request.getName() );
+        user.password( request.getPassword() );
+        user.rol( request.getRol() );
 
-        return userEntity.build();
+        return user.build();
     }
 
     @Override
-    public UserBasicResponse entityToResp(UserEntity entity) {
+    public UserBasicResponse entityToResp(User entity) {
         if ( entity == null ) {
             return null;
         }

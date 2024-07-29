@@ -6,12 +6,12 @@ import org.mapstruct.ReportingPolicy;
 
 import com.riwi.assentment_project.api.dto.request.UserRequest;
 import com.riwi.assentment_project.api.dto.response.UserBasicResponse;
-import com.riwi.assentment_project.domain.entities.UserEntity;
+import com.riwi.assentment_project.domain.entities.User;
 
 @Mapper(componentModel = MappingConstants.ComponentModel.SPRING, unmappedTargetPolicy = ReportingPolicy.IGNORE)
 public interface UserMapper {
     
-    UserEntity requestToEntity(UserRequest request);
+    User requestToEntity(UserRequest request);
 
-    UserBasicResponse entityToResp(UserEntity entity);
+    UserBasicResponse entityToResp(User entity);
 }
