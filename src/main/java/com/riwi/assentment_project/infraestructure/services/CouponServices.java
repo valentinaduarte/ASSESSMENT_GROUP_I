@@ -52,8 +52,8 @@ public class CouponServices implements ICouponService {
         couponToUpdate.setId(coupon.getId());
         couponToUpdate.setStart_date(coupon.getStart_date());
         couponToUpdate.setExpire_date(coupon.getExpire_date());
-        couponToUpdate.setStatus(coupon.isStatus());
-        return this.couponMapper.entityToResponse(this.couponRepository.save(coupon));
+        couponToUpdate.setStatus(request.isStatus());
+        return this.couponMapper.entityToResponse(this.couponRepository.save(couponToUpdate));
     }
 
     @Override

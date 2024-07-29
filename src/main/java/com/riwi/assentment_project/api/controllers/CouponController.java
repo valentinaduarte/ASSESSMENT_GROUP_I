@@ -10,6 +10,7 @@ import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.PutMapping;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.riwi.assentment_project.api.dto.request.CouponRequest;
@@ -51,7 +52,7 @@ public class CouponController {
 
     @Operation(summary = "Get all coupons in the system and return the list of coupons")
     @GetMapping
-    public ResponseEntity<Page<CouponResponse>> getAll(int page, int size) {
+    public ResponseEntity<Page<CouponResponse>> getAll(@RequestParam(defaultValue = "0") int page, @RequestParam(defaultValue = "10") int size) {
         Page<CouponResponse> response = couponService.getAll(page, size);
         return ResponseEntity.ok(response);
     }

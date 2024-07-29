@@ -5,6 +5,7 @@ import java.time.LocalDateTime;
 import jakarta.validation.constraints.FutureOrPresent;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotNull;
+import jakarta.validation.constraints.Pattern;
 import jakarta.validation.constraints.Size;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -22,7 +23,7 @@ public class CouponRequestUpdate {
     @FutureOrPresent(message = "Expire Date cannot be in the future")
     private LocalDateTime expire_date;
 
-    @NotBlank(message = "Status cannot be blank")
+    // @Pattern(regexp = "^(true|false)$", message = "tatus must be true or false")
     private boolean status;
 
 }
