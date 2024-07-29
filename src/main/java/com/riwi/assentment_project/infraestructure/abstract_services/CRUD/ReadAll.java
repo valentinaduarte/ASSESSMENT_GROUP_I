@@ -5,6 +5,6 @@ import org.springframework.data.domain.Pageable;
 
 public interface ReadAll<Response> {
 
-    Page<Response> getAll(Pageable pageable);
+    Page<Response> getAll(Pageable pageable, int page, int size);
     
 }
